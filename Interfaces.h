@@ -1,6 +1,7 @@
 #pragma once
 
 #include <windows.h>
+#include <atlbase.h>
 #include <GeneralDefinitions.h>
 
 __interface __declspec(uuid("5FF0CA70-8B12-11D1-B708-00A024DDAFD1"))
@@ -71,7 +72,7 @@ IPublicHouse : IUnknown
 	virtual CellStruct __stdcall	Apparent_Base_Center() const = 0;
 	virtual bool __stdcall			Is_Powered() const = 0;
 };
-
+/*
 typedef struct tagCONNECTDATA
 {
 	IUnknown* pUnk;
@@ -114,7 +115,7 @@ IEnumConnectionPoints : IUnknown
 	virtual HRESULT __stdcall Reset() = 0;
 	virtual HRESULT __stdcall Clone(IEnumConnectionPoints** ppEnum) = 0;
 };
-
+*/
 __interface __declspec(uuid("96F02EC7-6FE8-11D1-B6FD-00A024DDAFD1"))
 IGameMap : IUnknown
 {
