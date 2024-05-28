@@ -453,7 +453,8 @@ public:
 
 	void DrawObject(SHPStruct* pSHP, int nFrame, Point2D* pLocation, RectangleStruct* pBounds,
 		int, int, int nZAdjust, ZGradient eZGradientDescIdx, int, int nBrightness, int TintColor,
-		SHPStruct* pZShape, int nZFrame, int nZOffsetX, int nZOffsetY, int);
+		SHPStruct* pZShape, int nZFrame, int nZOffsetX, int nZOffsetY, int)
+		{ JMP_THIS(0x705E00); }
 
 	int sub_70DE00(int State)
 	{ JMP_THIS(0x70DE00); }
