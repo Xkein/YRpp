@@ -300,6 +300,15 @@ struct VoxelCacheStruct
 	void* Buffer;
 };
 
+#define __IndexKeyOperator(Type)						 \
+public: 												 \
+auto operator<=>(const Type& right) const {				 \
+    return *(int*)&*this <=> *(int*)&right;				 \
+}														 \
+bool operator==(const Type& right) const {				 \
+    return *(int*)&*this == *(int*)&right;				 \
+}
+
 struct MainVoxelIndexKey
 {
 public:
@@ -311,6 +320,7 @@ public:
 	unsigned UseAuxVoxel : 1; // !(!pUnit->Type->NoSpawnAlt || pUnit->SpawnManager->Draw_State())
 private:
 	unsigned bitfield_17 : 15;
+    __IndexKeyOperator(MainVoxelIndexKey);
 };
 
 struct TurretWeaponVoxelIndexKey
@@ -323,12 +333,14 @@ private:
 public:
 	unsigned FrameIndex : 8;
 	unsigned TurretWeaponIndex : 8;
+    __IndexKeyOperator(TurretWeaponVoxelIndexKey);
 };
 
 struct ShadowVoxelIndexKey
 {
 public:
 	unsigned Data : 32;
+    __IndexKeyOperator(ShadowVoxelIndexKey);
 };
 
 struct TurretBarrelVoxelIndexKey
@@ -342,6 +354,7 @@ public:
 	unsigned FrameIndex : 8;
 private:
 	unsigned bitfield_24 : 8;
+    __IndexKeyOperator(TurretBarrelVoxelIndexKey);
 };
 
 struct ReservedVoxelIndexKey
@@ -352,6 +365,7 @@ public:
 	unsigned ReservedIndex : 6;
 private:
 	unsigned bitfield_16 : 16;
+    __IndexKeyOperator(ReservedVoxelIndexKey);
 };
 
 union VoxelIndexKey
