@@ -7,6 +7,7 @@ class CCINIClass;
 class HouseTypeClass;
 class TActionClass;
 class TEventClass;
+class TagTypeClass;
 
 class NOVTABLE TriggerTypeClass : public AbstractTypeClass
 {
