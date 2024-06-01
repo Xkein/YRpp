@@ -4,7 +4,8 @@
 
 class TechnoClass;
 
-class PlanningBranchClass;
+class PlanningBranchClass
+{};
 // static_assert(sizeof(PlanningBranchClass) == 0x78);
 
 class PlanningMemberClass
