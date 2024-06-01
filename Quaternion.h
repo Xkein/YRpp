@@ -36,7 +36,7 @@ public:
 	const float& operator[](int idx) const
 		{ return (&X)[idx]; }
 
-	Quaternion& operator=(Quaternion& another)
+	Quaternion& operator=(const Quaternion& another)
 	{
 		X = another.X;
 		Y = another.Y;
