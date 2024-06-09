@@ -27,7 +27,7 @@ public:
 	virtual ObjectTypeClass* GetType() const override R0;
 	virtual bool Limbo() override R0;
 	virtual bool Unlimbo(const CoordStruct& Crd, DirType dFaceDir) override R0;
-	virtual void Draw(Point2D* pLocation, RectangleStruct* pBounds) const override RX;
+	virtual void DrawIt(Point2D* pLocation, RectangleStruct* pBounds) const override RX;
 
 	//Destructor
 	virtual ~IsometricTileClass() RX;
