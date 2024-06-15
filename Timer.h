@@ -12,11 +12,11 @@ struct FrameTimer
 	operator long() const { return Unsorted::CurrentFrame; }
 };
 
-struct SystemTimer
-{
-	long operator()()const { return timeGetTime() >> 4; }
-	operator long() const { return timeGetTime() >> 4; }
-};
+//struct SystemTimer
+//{
+//	long operator()()const { return timeGetTime() >> 4; }
+//	operator long() const { return timeGetTime() >> 4; }
+//};
 
 template<TimerType Clock>
 struct TimerStruct
@@ -114,10 +114,10 @@ struct TimerStruct
 
 // Timer that counts down from specified value towards zero, counted in frames.
 using CDTimerClass = TimerStruct<FrameTimer>;
-using SysTimerClass = TimerStruct<SystemTimer>;
+//using SysTimerClass = TimerStruct<SystemTimer>;
 
 static_assert(offsetof(CDTimerClass, TimeLeft) == 0x8);
-static_assert(sizeof(SysTimerClass) == 0xC);
+//static_assert(sizeof(SysTimerClass) == 0xC);
 
 // Timer that counts down towards zero at specified rate, counted in frames.
 class RateTimer : public CDTimerClass

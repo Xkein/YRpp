@@ -26,8 +26,8 @@ public:
 	//GScreenClass
 	//MapClass
 	//DisplayClass
-	virtual HRESULT Load(IStream* pStm) RX;
-	virtual HRESULT Save(IStream* pStm) RX;
+	virtual HRESULT Load(IStream* pStm) R0;
+	virtual HRESULT Save(IStream* pStm) R0;
 	virtual void LoadFromINI(CCINIClass* pINI) RX; //Loads the map from a map file.
 	virtual const wchar_t* GetToolTip(UINT nDlgID) R0;
 	virtual void CloseWindow() RX; //prolly wrong naming
@@ -45,7 +45,7 @@ public:
 
 	//Decides which mouse pointer to set and then does it.
 	//Mouse is over cell pMapCoords which is bShrouded and holds pObject.
-	virtual bool ConvertAction(const CellStruct& cell, bool bShrouded, ObjectClass* pObject, Action action, bool dwUnk) RX;
+    virtual bool ConvertAction(const CellStruct& cell, bool bShrouded, ObjectClass* pObject, Action action, bool dwUnk) R0;
 	virtual void LeftMouseButtonDown(const Point2D& point) RX;
 	virtual void LeftMouseButtonUp(const CoordStruct& coords, const CellStruct& cell, ObjectClass* pObject, Action action, DWORD dwUnk2) RX;
 	virtual void RightMouseButtonUp(DWORD dwUnk) RX;
