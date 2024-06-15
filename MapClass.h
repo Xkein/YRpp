@@ -500,8 +500,8 @@ public:
 
 	bool IsLocationFogged(const CoordStruct& coord)
 		{ JMP_THIS(0x5865E0); }
-	bool IsLocationFogged(CoordStruct&& coord)
-		{ return IsLocationFogged(coord); }
+	//bool IsLocationFogged(CoordStruct&& coord)
+	//	{ return IsLocationFogged(coord); }
 
 	void RevealCheck(CellClass* pCell, HouseClass* pHouse, bool bUnk)
 		{ JMP_THIS(0x5865F0); }

@@ -47,6 +47,8 @@ public:
 
 	void Render() { JMP_THIS(0x4F4480); }
 
+    GScreenClass& operator=(const GScreenClass&) = delete;
+
 protected:
 	//Constuctor
 	GScreenClass() {}	//don't need this
