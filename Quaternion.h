@@ -1,7 +1,6 @@
 #pragma once
 
-class Matrix3D;
-
+#include <Matrix3D.h>
 #include <YRMathVector.h>
 
 class Quaternion
@@ -45,26 +44,26 @@ public:
 		return *this;
 	}
 
-	Quaternion __fastcall Inverse(const Quaternion& value)
+	Quaternion Inverse()
 		{ return Quaternion{ -X,-Y,-Z,-W }; }
 
-	Quaternion __fastcall Conjugate(const Quaternion& value) 
+	Quaternion Conjugate() 
 		{ return Quaternion{ -X,-Y,-Z,W }; }
 
-	Quaternion* __fastcall Trackball(Quaternion& ret, float x0, float y0, float x1, float y1, float radius)
+	static Quaternion __fastcall Trackball(float x0, float y0, float x1, float y1, float radius)
 		{ JMP_STD(0x646160); }
 
-	Quaternion* __fastcall FromAxis(Quaternion& ret, const Vector3D<float>& src, float phi)
+	static Quaternion __fastcall FromAxis(const Vector3D<float>& src, float phi)
 		{ JMP_STD(0x646480); }
 
-	Quaternion* __fastcall Slerp(Quaternion& ret, const Quaternion& a, const Quaternion& b, float alpha)
+	static Quaternion __fastcall Slerp(const Quaternion& a, const Quaternion& b, float alpha)
 		{ JMP_STD(0x646590); }
 
 
-	Quaternion* __fastcall FromMatrix3D(Quaternion& ret, const Matrix3D& mat)
+	static Quaternion __fastcall FromMatrix3D(const Matrix3D& mat)
 		{ JMP_STD(0x646730); }
 
-	Matrix3D* __fastcall ToMatrix3D(Matrix3D& ret, const Quaternion& qua)
+	static Matrix3D __fastcall ToMatrix3D(const Quaternion& qua)
 		{ JMP_STD(0x646980); }
 
 	float X{ 0.0f };

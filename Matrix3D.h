@@ -2,9 +2,10 @@
 
 #include <YRPPCore.h>
 #include <GeneralStructures.h>
-#include <Quaternion.h>
 
 #include <Helpers/CompileTime.h>
+
+class Quaternion;
 
 template <typename T>
 class Vector4D
