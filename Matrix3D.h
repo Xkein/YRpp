@@ -5,6 +5,8 @@
 
 #include <Helpers/CompileTime.h>
 
+class Quaternion;
+
 template <typename T>
 class Vector4D
 {
