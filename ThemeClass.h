@@ -79,6 +79,6 @@ public:
 	bool IsScoreRepeat;
 	bool IsFading;
 	bool IsScoreShuffle;
-	DynamicVectorClass<ThemeClass*> Themes; // the list of all themes
+	DynamicVectorClass<ThemeControl*> Themes; // the list of all themes
 	AudioStream* Stream;
 };
