@@ -16,6 +16,13 @@ public:
 	// the hidden element count messes with alignment. only applies to align 8, 16, ...
 	static_assert(!needs_vector_delete<T> || (__alignof(T) <= 4), "Alignment of T needs to be less than or equal to 4.");
 	static constexpr bool GameCreateDisallowed = true;
+	
+    using value_type      = T;
+    using pointer         = T*;
+    using const_pointer   = const T*;
+    using reference       = T&;
+    using const_reference = const T&;
+
 	constexpr VectorClass() noexcept = default;
 
 	explicit VectorClass(int capacity, T* pMem = nullptr) {
