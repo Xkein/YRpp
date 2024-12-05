@@ -370,7 +370,10 @@ public:
 
 	// these are for mostly for map actions - HouseClass* foo = IsMP() ? Find_YesMP() : Find_NoMP();
 	static bool __fastcall Index_IsMP(int idx)
-		{ JMP_STD(0x510F60); }
+	{
+		// JMP_STD(0x510F60);
+		return idx >= PlayerAtA && idx <= PlayerAtH;
+	}
 	static HouseClass * __fastcall FindByCountryIndex(int HouseType) // find first house of this houseType
 		{ JMP_STD(0x502D30); }
 	static HouseClass * __fastcall FindByIndex(int idxHouse) // find house at given index
@@ -380,11 +383,6 @@ public:
 
 	static int __fastcall GetPlayerAtFromString(const char* name)
 		{ JMP_STD(0x510FB0); }
-	static bool __fastcall IsPlayerAtType(int at)
-	{
-		// JMP_STD(0x510F60);
-		return at >= PlayerAtA && at <= PlayerAtH;
-	}
 	static HouseClass* __fastcall FindByPlayerAt(int at)
 		{ JMP_STD(0x510ED0); }
 
