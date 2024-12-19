@@ -17,7 +17,7 @@ public:
 		{ JMP_THIS(0x692300); }
 
 	// the foundation for placement with green/red
-	void  SetActiveFoundation(CellStruct *Coords)
+	void  SetActiveFoundation(const CellStruct *Coords)
 		{ JMP_THIS(0x4A8BF0); }
 
 	//Destructor

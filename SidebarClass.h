@@ -104,6 +104,9 @@ public:
 	static int __fastcall GetObjectTabIdx(AbstractType abs, BuildCat buildCat, bool isNaval)
 		{ JMP_STD(0x6ABCD0); }
 
+	bool Scroll(bool up, int column)
+		{ JMP_THIS(0x6A6A00); }
+
 protected:
 	//Constructor
 	SidebarClass() {}	//don't need this
