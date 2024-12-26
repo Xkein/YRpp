@@ -32,7 +32,7 @@ public:
 	virtual ~WWMouseClass()
 		{ JMP_THIS(0x0); }
 
-	virtual void Draw(CellStruct const& coords, SHPStruct const* pImage, int idxFrame)
+	virtual void Draw(Point2D const& coords, SHPStruct const* pImage, int idxFrame)
 		{ JMP_THIS(0x7B8A00); }
 
 	virtual bool IsRefCountNegative()
@@ -87,23 +87,22 @@ public:
 
 	SHPStruct * Image;
 	int         ImageFrameIndex;
-	DWORD       RefCount;
-	byte        field_10;
+	int         RefCount;
+	bool        field_10;
 	byte        field_11;
 	byte        field_12;
 	byte        field_13;
-	DWORD       field_14;
-	DWORD       field_18;
+	Point2D     field_14;
 	Point2D     XY1;
 	DSurface *  Surface;
 	HWND        hWnd;
 	RectangleStruct Rect0;
 	Point2D     XY2;
-	DWORD       field_44;
+	BSurface*   field_44;
 	RectangleStruct Rect1;
-	DWORD       field_58;
+	BSurface*   field_58;
 	RectangleStruct Rect2;
-	DWORD       field_6C;
+	BSurface*   field_6C;
 	RectangleStruct Rect3;
 	RectangleStruct Rect4;
 	DWORD       field_90;

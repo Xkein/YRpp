@@ -134,7 +134,8 @@ public:
 	BulletVelocity Velocity;
 	DWORD unknown_100;
 	bool unknown_104;
-	DWORD unknown_108;
+	bool CourseLock;
+	int CourseLockCounter;
 	AbstractClass* Target;
 	int Speed;
 	int InheritedColor;

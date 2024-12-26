@@ -267,7 +267,7 @@ public:
 	DWORD unknown_544;
 	AnimClass* FirestormAnim; //pointer
 	AnimClass* PsiWarnAnim; //pointer
-	CDTimerClass unknown_timer_550;
+	CDTimerClass FactoryRetryTimer;
 
 // see eBuildingAnims above for slot index meanings
 	AnimClass * Anims [0x15];

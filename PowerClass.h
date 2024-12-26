@@ -22,7 +22,7 @@ protected:
 	//===========================================================================
 
 public:
-	bool unknown_bool_150C;
+	bool PowerNeedRedraw;
 	PROTECTED_PROPERTY(BYTE, align_150D[3])
 	CDTimerClass unknown_timer_1510;
 	DWORD unknown_151C;

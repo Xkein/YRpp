@@ -62,12 +62,12 @@ public:
 	virtual void UnPanic() RX; //never
 	virtual void PlayIdleAnim(int nIdleAnimNumber) RX;
 	virtual DWORD vt_entry_524() R0;
-	virtual DWORD vt_entry_528(TypeList<BuildingTypeClass*>* bList, DWORD dwUnk2, DWORD dwUnk3) const R0;
-	virtual BuildingClass* vt_entry_52C(BuildingTypeClass* bType, DWORD dwUnk2, DWORD dwUnk3, int* dwUnk4) const R0;
-	virtual DWORD vt_entry_530(DWORD dwUnk, DWORD dwUnk2, DWORD dwUnk3) const R0;
+	virtual BuildingClass* TryNearestDockBuilding(TypeList<BuildingTypeClass*>* bList, DWORD dwUnk2, DWORD dwUnk3) const R0;
+	virtual BuildingClass* FindCloserDockBuilding(BuildingTypeClass* bType, DWORD dwUnk2, DWORD dwUnk3, int* pDistance) const R0;
+	virtual BuildingClass* FindNearestDockBuilding(BuildingTypeClass* bType, DWORD dwUnk2, DWORD dwUnk3) const R0;
 	virtual void vt_entry_534(DWORD dwUnk, DWORD dwUnk2) RX;
 	virtual int GetCurrentSpeed() const R0;
-	virtual DWORD vt_entry_53C(DWORD dwUnk) R0;
+	virtual AbstractClass* vt_entry_53C(DWORD dwUnk) R0;
 	virtual void vt_entry_540(DWORD dwUnk) RX;
 	virtual void SetSpeedPercentage(double percentage) RX;
 	virtual void vt_entry_548() RX;
@@ -170,11 +170,11 @@ public:
 	AbstractClass*  Destination; // possibly other objects as well
 	AbstractClass*  LastDestination;
 	DECLARE_PROPERTY(DynamicVectorClass<AbstractClass*>, NavQueue); // Stores sequence of movement destinations
-	int             unknown_int_5C4;
-	DWORD           unknown_5C8;
-	DWORD           unknown_5CC;
+	Mission         MegaMission; // only Mission::AttackMove or Mission::None
+	AbstractClass*  MegaDestination; // when AttackMove target is a cell
+	AbstractClass*  MegaTarget; // when AttackMove target is an object
 	BYTE            unknown_5D0;	//unused?
-	bool            unknown_bool_5D1;
+	bool            HaveAttackMoveTarget; // fighting an enemy on the way
 	TeamClass*      Team;
 	FootClass*      NextTeamMember;        //next unit in team
 	DWORD           unknown_5DC;
@@ -201,7 +201,7 @@ public:
 	bool              ShouldEnterOccupiable; // orders the unit to enter the closest battle bunker
 	bool              ShouldGarrisonStructure; // orders the unit to enter the closest neutral building
 	FootClass*        ParasiteEatingMe; // the tdrone/squid that's eating me
-	DWORD             unknown_698;
+	int               LastBeParasitedStartFrame;
 	ParasiteClass*    ParasiteImUsing;	// my parasitic half, nonzero for, eg, terror drone or squiddy
 	DECLARE_PROPERTY(CDTimerClass, ParalysisTimer); // for squid victims
 	bool              unknown_bool_6AC;

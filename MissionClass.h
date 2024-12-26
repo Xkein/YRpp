@@ -111,6 +111,6 @@ public:
 	bool     unknown_bool_B8;
 	int      MissionStatus;
 	int      CurrentMissionStartTime;	//in frames
-	DWORD    unknown_C4;
+	int      MissionAccumulateTime;
 	DECLARE_PROPERTY(CDTimerClass, UpdateTimer);
 };
