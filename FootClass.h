@@ -73,7 +73,7 @@ public:
 	virtual void SetSpeedPercentage(double percentage) RX;
 	virtual void vt_entry_548() RX;
 	virtual void vt_entry_54C() RX;
-	virtual bool vt_entry_550(DWORD dwUnk) R0;
+	virtual bool IsLandZoneClear(AbstractClass* pDestination) R0;
 
 	bool CanBeRecruited(HouseClass *ByWhom) const
 		{ JMP_THIS(0x4DA230); }

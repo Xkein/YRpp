@@ -145,6 +145,12 @@ public:
 		return ret;
 	}
 
+	int DistanceFrom(AbstractClass *that) const
+		{ JMP_THIS(0x5F6440); }
+
+	int DistanceFrom3D(AbstractClass *that) const
+		{ JMP_THIS(0x5F6360); }
+
 	//Operators
 	bool operator < (const AbstractClass &rhs) const {
 		return this->UniqueID < rhs.UniqueID;

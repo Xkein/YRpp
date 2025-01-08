@@ -498,6 +498,9 @@ public:
 	WeaponStruct* GetPrimaryWeapon() const
 	{ JMP_THIS(0x70E1A0); }
 
+	bool TryNextPlanningTokenNode()
+	{ JMP_THIS(0x6385C0); }
+
 	int GetIonCannonValue(AIDifficulty difficulty) const;
 
 	int GetIonCannonValue(AIDifficulty difficulty, int maxHealth) const

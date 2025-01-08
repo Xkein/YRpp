@@ -200,9 +200,6 @@ public:
 		{ PUSH_VAR32(color); PUSH_VAR32(dst_Z); PUSH_VAR32(dst_Y); PUSH_VAR32(dst_X);
 			PUSH_VAR32(src_Z); PUSH_VAR32(src_Y); PUSH_VAR32(src_X); CALL(0x704E40); }
 
-	int DistanceFrom(AbstractClass *that) const
-		{ JMP_THIS(0x5F6440); }
-
 	double GetHealthPercentage() const
 		{ return static_cast<double>(this->Health) / this->GetType()->Strength; }
 
