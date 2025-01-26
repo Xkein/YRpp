@@ -119,8 +119,12 @@ public:
 	void EnterAsPassenger(FootClass* pPassenger)
 		{ JMP_THIS(0x4DE630); }
 
+	// Adds to the NavQueue
+	void QueueNavigationList(AbstractClass * target)
+	{ JMP_THIS(0x4DA0E0); }
+
 	// Clears NavQueue
-	void ClearNavQueue()
+	void ClearNavigationList()
 		{ JMP_THIS(0x4DA1C0); }
 
 	// searches cell, sets destination, and returns whether unit is on that cell

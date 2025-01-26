@@ -62,6 +62,6 @@ public:
 	int KeyForceSelect1;
 	int KeyForceSelect2;
 
-	int unknown_int_B0;
-	int unknown_int_B4;
+	int KeyQueueMove1;
+	int KeyQueueMove2;
 };
