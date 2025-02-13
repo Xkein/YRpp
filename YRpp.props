@@ -195,6 +195,7 @@
     <ClInclude Include="$(YRppDir)\HeapClass.h" />
     <ClInclude Include="$(YRppDir)\HouseClass.h" />
     <ClInclude Include="$(YRppDir)\HouseTypeClass.h" />
+    <ClInclude Include="$(YRppDir)\HoverLocomotionClass.h" />
     <ClInclude Include="$(YRppDir)\IndexClass.h" />
     <ClInclude Include="$(YRppDir)\InfantryClass.h" />
     <ClInclude Include="$(YRppDir)\InfantryTypeClass.h" />
