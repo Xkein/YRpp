@@ -49,6 +49,9 @@ public:
 		: AircraftClass(noinit_t())
 	{ JMP_THIS(0x413D20); }
 
+	AbstractClass* FindFireLocation(AbstractClass* pTarget)
+		{ JMP_THIS(0x4197C0); }
+
 protected:
 	explicit __forceinline AircraftClass(noinit_t) noexcept
 		: FootClass(noinit_t())
