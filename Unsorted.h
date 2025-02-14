@@ -129,6 +129,10 @@ public:
 	static double GetFloaterGravity()
 	{ JMP_STD(0x48ACF0); }
 
+	// Main loop of the game.
+	static void __fastcall MainLoop()
+		{ JMP_STD(0x55D360); }
+
 	static void __fastcall KeyboardProcess(DWORD& input)
 	{ JMP_STD(0x55DEE0); }
 

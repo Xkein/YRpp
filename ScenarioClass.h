@@ -95,6 +95,12 @@ public:
 
 	static bool __fastcall StartScenario(const char* FileName, bool Briefing, int CampaignIndex)
 		{ JMP_STD(0x683AB0); }
+	
+	static void __fastcall PauseGame()
+		{ JMP_STD(0x683EB0); }
+	
+	static void __fastcall ResumeGame()
+		{ JMP_STD(0x683FB0); }
 
 	static void __fastcall AssignHouses()
 		{ JMP_STD(0x687F10); }
