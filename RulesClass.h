@@ -211,7 +211,7 @@ public:
 
 
 	//CTOR / DTOR
-protected:
+public:
 	RulesClass() JMP_THIS(0x665650);
 	~RulesClass() JMP_THIS(0x667A30);
 

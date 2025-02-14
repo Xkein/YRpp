@@ -122,7 +122,7 @@ public:
 	}
 
 	//CTOR / DTOR
-protected:
+public:
 	ScenarioClass() { THISCALL(0x6832C0); }
 	~ScenarioClass() { THISCALL(0x667A30); }
 
