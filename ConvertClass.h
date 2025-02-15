@@ -25,7 +25,7 @@ public:
 	//global array
 	static constexpr constant_ptr<DynamicVectorClass<ConvertClass*>, 0x89ECF8u> const Array{};
 
-	static ConvertClass* FindOrAllocate(const char* pFilename);
+	// static ConvertClass* FindOrAllocate(const char* pFilename);
 
 	static void __fastcall CreateFromFile(const char* pFilename, BytePalette* &pPalette, ConvertClass* &pDestination)
 		{ JMP_STD(0x72ADE0); }

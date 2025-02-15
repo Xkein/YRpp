@@ -102,7 +102,7 @@ typedef struct _DDSURFACEDESC2 {
 } DDSURFACEDESC2;
 
 //IDirectDrawSurface
-interface IDirectDrawSurface;
+interface IDirectDrawSurface {};
 
 class eDDCoopLevel {
 public:
