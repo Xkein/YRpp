@@ -1,7 +1,7 @@
 #pragma once
 
 #include <DisplayClass.h>
-
+struct RadarTrackingStruct;
 class NOVTABLE RadarClass : public DisplayClass
 {
 public:
@@ -59,7 +59,7 @@ public:
 	DWORD unknown_124C;
 	DWORD unknown_1250;
 	DWORD unknown_1254;
-	DWORD unknown_1258;
+	HashTable<RadarTrackingStruct, TechnoClass*>* unknown_1258;
 	DynamicVectorClass<Point2D> unknown_points_125C;
 	DWORD unknown_1274;
 	DynamicVectorClass<Point2D> FoundationTypePixels[22];
