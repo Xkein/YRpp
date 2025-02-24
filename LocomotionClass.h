@@ -161,6 +161,7 @@ public:
 	//Constructors
 	LocomotionClass() { JMP_THIS(0x55A6C0); }
 
+	LocomotionClass& operator=(const LocomotionClass&) = delete;
 protected:
 	explicit __forceinline LocomotionClass(noinit_t) noexcept { }
 
