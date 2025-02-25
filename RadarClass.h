@@ -1,7 +1,7 @@
 #pragma once
 
 #include <DisplayClass.h>
-struct RadarTrackingStruct;
+struct RadarTrackingStruct {};
 class NOVTABLE RadarClass : public DisplayClass
 {
 public:

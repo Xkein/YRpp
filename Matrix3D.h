@@ -55,7 +55,7 @@ public:
 	constexpr float operator[](int idx) const
 	{ return (&X)[idx]; }
 
-	constexpr Quaternion& operator=(Quaternion& another)
+	constexpr Quaternion& operator=(const Quaternion& another)
 	{
 		X = another.X;
 		Y = another.Y;
