@@ -1,6 +1,14 @@
 #pragma once
 
+#include <type_traits>
 #include <concepts>
+
+namespace detail_compile_time {
+    template<typename T>
+    concept has_indirection = requires(T a) {
+		*a;
+    };
+}
 
 // defines a compile time pointer to a known memory address
 template <typename T, unsigned int Address>
@@ -27,7 +35,7 @@ public:
 		return get();
 	}
 
-	T& operator*() const noexcept {
+	T& operator*() const noexcept requires detail_compile_time::has_indirection<value_type> {
 		return *get();
 	}
 };
@@ -61,7 +69,7 @@ public:
 		return &get();
 	}
 
-	decltype(auto) operator*() const noexcept {
+	decltype(auto) operator*() const noexcept requires detail_compile_time::has_indirection<value_type&> {
 		return *get();
 	}
 
@@ -124,7 +132,7 @@ public:
 			return &get();
 	}
 
-	decltype(auto) operator*() const noexcept {
+	decltype(auto) operator*() const noexcept requires detail_compile_time::has_indirection<value_type&> {
 		return *get();
 	}
 
