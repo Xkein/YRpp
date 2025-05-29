@@ -164,6 +164,8 @@ public:
 	*/
 	AbstractClass& operator=(const AbstractClass&) = delete;
 
+	GAME_OVERLOAD_ALLOCATION;
+
 protected:
 	explicit __forceinline AbstractClass(noinit_t) noexcept
 	{ }

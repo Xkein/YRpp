@@ -242,3 +242,11 @@ struct GameDeleter
 //
 //#define GAME_ALLOC_ARR(TT, Capacity, var) \
 //	var = GameCreateArray<TT>(Capacity);
+
+#define GAME_OVERLOAD_ALLOCATION \
+    void* operator new(size_t size) { \
+		return YRMemory::AllocateChecked(size); \
+    } \
+    void operator delete(void* ptr) noexcept { \
+		YRMemory::Deallocate(ptr); \
+    }
