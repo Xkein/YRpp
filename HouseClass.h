@@ -148,6 +148,9 @@ struct DropshipStruct
 {
 	DropshipStruct() JMP_THIS(0x4B69B0);
 	~DropshipStruct() JMP_THIS(0x4B69D0);
+	DropshipStruct(const DropshipStruct& other) {
+		memcpy(this, &other, sizeof(DropshipStruct));
+	}
 
 	DECLARE_PROPERTY(CDTimerClass, Timer);
 	BYTE             unknown_C;
