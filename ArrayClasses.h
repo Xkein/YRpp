@@ -204,7 +204,7 @@ public:
 	constexpr DynamicVectorClass() noexcept = default;
 	static constexpr bool GameCreateDisallowed = true;
 	explicit DynamicVectorClass(int capacity, T* pMem = nullptr)
-		: VectorClass(capacity, pMem)
+		: VectorClass<T>(capacity, pMem)
 	{ }
 
 	DynamicVectorClass(const DynamicVectorClass &other) {

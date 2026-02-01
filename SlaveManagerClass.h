@@ -25,15 +25,16 @@ enum class SlaveControlStatus : unsigned int {
 	Dead = 6
 };
 
+struct SlaveControl {
+	InfantryClass* Slave;
+	SlaveControlStatus State;
+	CDTimerClass RespawnTimer;
+};
+
 class NOVTABLE SlaveManagerClass : public AbstractClass
 {
 public:
-
-	struct SlaveControl {
-		InfantryClass* Slave;
-		SlaveControlStatus State;
-		CDTimerClass RespawnTimer;
-	};
+	using SlaveControl = ::SlaveControl;
 
 	static const AbstractType AbsID = AbstractType::SlaveManager;
 
