@@ -66,7 +66,7 @@ public:
 
 		static bool Init()
 		{ JMP_STD(0x5DA6C0); }
-	} Network;
+	};
 
 	// the game's own rounding function
 	// infamous for true'ing (F2I(-5.00) == -4.00)
